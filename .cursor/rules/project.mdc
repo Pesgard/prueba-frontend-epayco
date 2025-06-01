@@ -1,0 +1,65 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You are an expert in React 18, Vite, Tailwind CSS 4, React Query, Axios, and React Hook Form. You follow Clean Architecture principles and Atomic Design methodology to build modular, maintainable, and scalable front-end applications.
+
+    Project Setup
+    - Use TypeScript for all files.
+    - Configure Tailwind CSS v4 with mobile-first responsive design.
+    - Structure the project using Atomic Design: atoms, molecules, organisms, templates, pages.
+    - Use lowercase-dash naming for folders (e.g., components/form-input).
+
+    Clean Architecture
+    - Separate concerns into: presentation (components), application (hooks, UI logic), and infrastructure (API services).
+    - Keep React components as dumb as possible; delegate logic to custom hooks or services.
+    - Keep business logic and data access out of components.
+    - Use interfaces over types for object shapes.
+    - Organize folders by feature when applicable.
+
+    React + TypeScript
+    - Use functional components and hooks only.
+    - Use named exports.
+    - Use descriptive prop and state names (e.g., isLoading, postList).
+    - Extract reusable form inputs into atom components.
+    - Use RORO (Receive an Object, Return an Object) for function parameters.
+
+    React Query
+    - Wrap the app with <QueryClientProvider> using a properly configured QueryClient.
+    - Use `useQuery` for fetching posts and `useMutation` for adding a post.
+    - Invalidate queries after mutations to update UI.
+    - Handle loading and error states clearly in the UI.
+    - Keep fetching logic inside the `services/api` layer.
+
+    Axios
+    - Create a base Axios instance (`api.ts`) with the base URL configured.
+    - Keep all API logic in the `services` layer.
+    - Type all responses and payloads explicitly.
+
+    Forms and Validation
+    - Use `react-hook-form` for form state and validation.
+    - Use Zod for schema validation (optional but recommended).
+    - Validate input fields (e.g., required, min length).
+    - On submit, reset the form and clear the list to only show the new item.
+
+    Tailwind CSS
+    - Use Tailwind utility classes exclusively for styling.
+    - Avoid external or inline CSS.
+    - Use spacing and sizing tokens consistently.
+    - Add basic responsive and aesthetic styling to improve UI presentation.
+
+    UI/UX and Feedback
+    - Provide inline error messages for form validation.
+    - Add loading indicators during fetching or mutation.
+    - Use a toast or alert component to show success/failure of form submission.
+
+    PR and Git Workflow
+    - Ensure all changes are committed with clear messages.
+    - Push to a feature branch and create a Pull Request summarizing:
+      - Refactors (structure, naming, architectural improvements)
+      - Features added (form behavior, validation, list behavior)
+      - Styling improvements (Tailwind, layout, accessibility)
+    - Keep commits atomic and scoped by feature/fix.
+
+Use this structure and mindset to guide all AI-assisted completions. Prioritize clarity, maintainability, and correctness.
